@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta para mi Tessi ❤️</title>
-    <style>
+    <style>  
         body {
             display: flex;
             justify-content: center;
@@ -15,7 +15,15 @@
             padding: 20px;
             text-align: center;
         }
-
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Espacio entre imágenes y carta */
+        }
+        .image {
+            width: 150px; /* Ajusta el tamaño de las imágenes */
+            height: auto;
+        }
         .message-box {
             background: white;
             padding: 20px;
@@ -24,56 +32,53 @@
             max-width: 600px;
             width: 100%;
         }
-
         .message {
             font-size: 18px;
             color: #f20044;
             text-align: left;
             white-space: pre-line;
             overflow: hidden;
-            border-right: 2px solid #f20044;
             display: inline-block;
+            border-right: 2px solid #f20044;
+            animation: blink 0.8s step-end infinite; /* Hace que parpadee */
         }
-
         @keyframes blink {
-            50% { border-color: transparent }
+            50% { border-color: transparent; }
+        }
+        .finished {
+            border-right: none !important; /* Oculta la barra cuando termina el texto */
         }
     </style>
 </head>
 <body>
-    <div class="message-box">
-        <h2>Para mi awoo awoo😻💖</h2>
-        <p class="message" id="typed-text"></p>
+    <div class="container">
+        <img src="awo.png" alt="Imagen izquierda" class="image"> <!-- Imagen izquierda -->
+        <div class="message-box">
+            <h2>Para mi awoo awoo😻💖</h2>
+            <p class="message" id="typed-text"></p>
+        </div>
+        <img src="elgato.png" alt="Imagen derecha" class="image"> <!-- Imagen derecha -->
     </div>
-
     <script>
         const message = `Desde el primer día en que llegaste a mi vida, todo se volvió más hermoso. No solo eres mi novia, eres mi alegría, mi compañera y la persona que ilumina cada uno de mis días. Me encanta todo de ti: tu dulzura, tu ternura, tu increíble sentido del humor que me hace reír sin parar, y esa forma tan especial en la que me haces sentir amado.
-
 Admiro la mujer que eres. A pesar de que tienes 22 años, eres increíblemente madura, responsable y trabajadora. Me siento tan orgulloso de todo lo que has logrado y de todo lo que aún te espera. Eres un gran ejemplo de que todo lo que se hace con esfuerzo y dedicación trae resultados positivos, y tenerte a mi lado es un regalo que valoro con todo mi corazón.
-
 Me encanta que compartamos la mayoría de las cosas, que podamos aprender juntos y entendernos de una manera tan especial. Aunque la distancia nos separa, sé que nuestro amor es más fuerte uwu . Haremos todo lo posible para vernos y seguir construyendo momentos inolvidables, porque no hay nada que desee más que estar contigo mi wawita.
-
 Tu amor llena cada espacio de mi vida, me sentía vacío hace mucho tiempo y tu llegaste a cambiarlo todo de una manera tan hermosa,  quiero que sigas aquí conmigo. Me fascina cómo disfrutas los museos, los resúmenes de películas y cómo te diviertes haciendo TikToks. Me encanta que siempre quieras saber cómo ha sido mi día, que te importe cada detalle, porque eso me hace sentir amado de una manera única.
-
 Además, adoro a tu familia. Juan y Lea son increíbles, me hacen reír esos dos esquizofrénicos y disfruto mucho su compañía. Tu mamá es una persona maravillosa y me alegra que desde el principio me haya aceptado. Y Murphy, con sus ladridos y ternura, también se ha convertido en un pequeño amigo canino especial para mí.
-
 Teresa, eres el amor de mi vida. No importa la distancia, ni el tiempo que pase, porque en mi corazón siempre estarás tú. Gracias por ser quien eres, por amarme tanto y por hacerme el hombre más feliz del mundo. 
-
 ❤️ Te amo con todo mi corazón mi niña hermosa ❤️`;
-
+        
         let index = 0;
         function typeText() {
             if (index < message.length) {
                 document.getElementById("typed-text").textContent += message.charAt(index);
                 index++;
                 setTimeout(typeText, 50); // Velocidad de escritura
+            } else {
+                document.getElementById("typed-text").classList.add("finished"); // Oculta la barra cuando termina
             }
         }
-
         window.onload = typeText;
     </script>
 </body>
 </html>
-
-
-
