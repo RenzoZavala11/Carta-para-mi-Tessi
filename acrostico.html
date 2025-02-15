@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acrostico de Teresa - San Valentín</title>
+  <style>
+    /* Estilos generales */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #e91e63;
+      position: relative;
+    }
+
+    h1::after {
+      content: '❤';
+      position: absolute;
+      right: -40px;
+      top: 0;
+      font-size: 1.5em;
+      animation: heartBeat 1.5s infinite;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    /* Estilos para alinear el acróstico con Flexbox */
+    .acrostico {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .acrostico-line {
+      display: flex;
+      align-items: center; /* Asegura que ambos spans estén al mismo nivel */
+      margin: 5px 0;
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+
+    .acrostico-line .letra {
+      font-weight: bold;
+      color: #e91e63;
+      font-size: 1.4em;
+      text-align: right;
+      width: 30px; /* Ancho fijo para la letra */
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .valentine-message {
+      margin-top: 20px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz San Valentín, Teresa</h1>
+    <div class="acrostico">
+      <div class="acrostico-line">
+        <span class="letra">T</span>
+        <span>ikToks graciosos me envías sin parar,</span>
+      </div>
+      <div class="acrostico-line">
+        <span class="letra">E</span>
+        <span>res más tierna que Murphy al ladrar.</span>
+      </div>
+      <div class="acrostico-line">
+        <span class="letra">R</span>
+        <span>esúmenes de pelis te encanta mirar,</span>
+      </div>
+      <div class="acrostico-line">
+        <span class="letra">E</span>
+        <span>n el museo nos podríamos casar.</span>
+      </div>
+      <div class="acrostico-line">
+        <span class="letra">S</span>
+        <span>i hablo con Juan y Lea me hacen reír,</span>
+      </div>
+      <div class="acrostico-line">
+        <span class="letra">A</span>
+        <span>l final del día contigo quiero dormir.</span>
+      </div>
+    </div>
+    <div class="valentine-message">
+      ¡Te amo mi awoaa awoaa y espero que haya sido un bonito San Valentín para ti!
+    </div>
+  </div>
+</body>
+</html>
